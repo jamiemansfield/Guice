@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+
+    id 'net.minecrell.licenser' version '0.3'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group = 'me.jamiemansfield'
+archivesBaseName = project.name.toLowerCase()
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // No libraries are needed for basic usage, only classes specific to
+    // a given library
+    compile 'com.google.guava:guava:21.0'
+    compile 'org.slf4j:slf4j-api:1.7.25'
+}
+
+license {
+    header = file('HEADER.txt')
+}
+
+processResources {
+    from 'LICENSE.txt'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.5'
+}
