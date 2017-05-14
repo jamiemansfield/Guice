@@ -16,8 +16,6 @@ repositories {
 }
 
 dependencies {
-    // No libraries are needed for basic usage, only classes specific to
-    // a given library
     compile 'com.google.guava:guava:21.0'
     compile 'org.slf4j:slf4j-api:1.7.25'
 }
